@@ -33,12 +33,13 @@ rl.question('是否开始插入数据（y/n）',function(answer){
     if(answer == 'n'){
         rl.close()
     } else if(answer == 'y') {
+        console.log('请以 ’姓名：成绩‘的形式插入');
         const table = [];
-        let x = 0
+        let x = 0;
         rl.on('line',async (line)=>{
             if (line != '排序') {
-                table[x] = line.split('：')//
-                console.log(table)
+                table[x] = line.split('：');
+                console.log(table);
                 x++;
             } else {
                 let a = [];
@@ -49,7 +50,7 @@ rl.question('是否开始插入数据（y/n）',function(answer){
                 for (let i = 0 ; i < y.length ; i++){
                     for (let z = 0 ; z < y.length ; z++){
                         if (parseFloat(table[i][1]) == y[z]){
-                            console.log(table[z][0]+':'+table[z][1])
+                            console.log(table[z][0]+':'+table[z][1]);
                         }
                     }
                 }
