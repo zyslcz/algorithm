@@ -28,7 +28,7 @@ class Grades {
 
     insert(e,ep){
         let Ep = this.find(ep);
-        Ep.next =new Student(e);
+        Ep.next = new Student(e);
         this.nums++
     }
 
@@ -68,8 +68,9 @@ class Grades {
 var a = new Grades()
 a.insert(11,'head')
 a.insert(33,11)
-a.insert(3,'head')
-a.insert(55,11)
-a.remove(11)
-a.change(33,22)
+a.insert(3,11)
+a.insert(55,3)
+a.remove(3)
+a.change(55,99)
+console.log(a.find(11))
 console.log(a.average())
